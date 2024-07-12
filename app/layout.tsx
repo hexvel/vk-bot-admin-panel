@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 	title: 'Admin panel',
 	description: 'admin panel for hexvel module',
 	openGraph: {
-		images: ['/preview.png'],
+		images: 'https://hexvel.ru/preview.png',
 	},
 }
 
