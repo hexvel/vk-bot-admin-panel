@@ -13,17 +13,20 @@ const TokenUpdate: React.FC = () => {
 
 	const handleSubmit = async () => {
 		if (userId && token && verificationCode) {
-			const response = await fetch('http://localhost:4200/api/users/token', {
-				method: 'PATCH',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					user_id: Number(userId),
-					token,
-					verification_code: verificationCode,
-				}),
-			})
+			const response = await fetch(
+				'http://185.128.106.51:4200/api/users/token',
+				{
+					method: 'PATCH',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						user_id: Number(userId),
+						token,
+						verification_code: verificationCode,
+					}),
+				}
+			)
 
 			if (!response.ok) {
 				setError('Не удалось обновить токен')

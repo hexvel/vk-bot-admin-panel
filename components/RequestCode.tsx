@@ -11,7 +11,7 @@ const RequestCode: React.FC = () => {
 	const handleSubmit = async () => {
 		if (userId) {
 			const response = await fetch(
-				'http://localhost:4200/api/users/request-verification-code',
+				'http://185.128.106.51:4200/api/users/request-verification-code',
 				{
 					method: 'POST',
 					headers: {
