@@ -1,6 +1,15 @@
 import TokenUpdate from '@/components/TokenUpdate'
+import { Metadata } from 'next'
 import React from 'react'
 import RequestCode from '../components/RequestCode'
+
+export const metadata: Metadata = {
+	title: 'Admin panel',
+	description: 'admin panel for hexvel module',
+	openGraph: {
+		images: 'https://hexvel.ru/preview.png',
+	},
+}
 
 const AdminPanel: React.FC = () => {
 	return (
