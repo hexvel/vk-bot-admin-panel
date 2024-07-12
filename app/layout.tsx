@@ -7,6 +7,9 @@ import './globals.css'
 export const metadata: Metadata = {
 	title: 'Admin panel',
 	description: 'admin panel for hexvel module',
+	openGraph: {
+		images: ['/preview.png'],
+	},
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
