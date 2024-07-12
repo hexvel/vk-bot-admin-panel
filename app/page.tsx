@@ -1,12 +1,14 @@
+import RequestCode from '@/components/RequestCode'
 import TokenUpdate from '@/components/TokenUpdate'
 import { Metadata } from 'next'
 import React from 'react'
-import RequestCode from '../components/RequestCode'
 
 export const metadata: Metadata = {
 	title: 'Admin panel',
 	description: 'admin panel for hexvel module',
 	openGraph: {
+		title: 'Hexvel Panel',
+		description: 'admin panel for hexvel module',
 		images: 'https://hexvel.ru/preview.png',
 	},
 }
