@@ -13,20 +13,17 @@ const TokenUpdate: React.FC = () => {
 
 	const handleSubmit = async () => {
 		if (userId && token && verificationCode) {
-			const response = await fetch(
-				'https://01b3-185-128-106-51.ngrok-free.app/api/users/token',
-				{
-					method: 'PATCH',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						user_id: Number(userId),
-						token,
-						verification_code: verificationCode,
-					}),
-				}
-			)
+			const response = await fetch('https://api.hexvel.ru/users/token', {
+				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					user_id: Number(userId),
+					token,
+					verification_code: verificationCode,
+				}),
+			})
 
 			if (!response.ok) {
 				setError('Не удалось обновить токен')

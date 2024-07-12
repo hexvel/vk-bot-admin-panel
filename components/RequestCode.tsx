@@ -11,7 +11,7 @@ const RequestCode: React.FC = () => {
 	const handleSubmit = async () => {
 		if (userId) {
 			const response = await fetch(
-				'https://01b3-185-128-106-51.ngrok-free.app/api/users/request-verification-code',
+				'https://api.hexvel.ru/users/request-verification-code',
 				{
 					method: 'POST',
 					headers: {
