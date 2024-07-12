@@ -61,7 +61,7 @@ const TokenUpdate: React.FC = () => {
 							onChange={e => setToken(e.target.value)}
 						/>
 					</div>
-					<div className='mb-2'>
+					<div className='mb-4'>
 						<Input
 							required
 							placeholder='Введите код подтверждения'
@@ -70,7 +70,9 @@ const TokenUpdate: React.FC = () => {
 						/>
 					</div>
 					{error ? <p className='text-red-500'>{error}</p> : null}
-					<Button onClick={handleSubmit}>Обновить токен</Button>
+					<Button className='w-full' onClick={handleSubmit}>
+						Обновить токен
+					</Button>
 				</form>
 			)}
 		</div>

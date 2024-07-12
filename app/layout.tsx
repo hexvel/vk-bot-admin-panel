@@ -1,6 +1,7 @@
 import { ThemeProvider } from '@/components/ThemeProvider'
 import type { Metadata } from 'next'
 
+import Header from '@/components/Header'
 import { ReactNode } from 'react'
 import './globals.css'
 
@@ -14,13 +15,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<>
 			<html lang='en' suppressHydrationWarning>
 				<head />
-				<body className='h-screen'>
+				<body className='h-screen dark:bg-[#070707]'>
 					<ThemeProvider
 						attribute='class'
 						defaultTheme='system'
 						enableSystem
 						disableTransitionOnChange
 					>
+						<Header />
 						{children}
 					</ThemeProvider>
 				</body>

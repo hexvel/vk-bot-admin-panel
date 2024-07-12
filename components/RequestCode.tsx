@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Button } from './ui/button'
-import { Input } from './ui/input'
+import { Label } from './ui/label'
+import { PlaceholdersAndVanishInput } from './ui/placeholders-and-vanish-input'
 
 const RequestCode: React.FC = () => {
 	const [userId, setUserId] = useState('')
@@ -36,19 +36,14 @@ const RequestCode: React.FC = () => {
 	return (
 		<div>
 			<h2 className='text-2xl font-bold mb-4'>Отправка кода подтверждения</h2>
-			<form onSubmit={e => e.preventDefault()}>
-				<Input
-					required
-					placeholder='Введите идентификатор пользователя'
-					value={userId}
+			<div className='flex flex-col justify-center'>
+				<Label className='mb-4'>Получите код подтверждения</Label>
+				<PlaceholdersAndVanishInput
+					placeholders={['Введите айди']}
+					onSubmit={handleSubmit}
 					onChange={e => setUserId(e.target.value)}
 				/>
-
-				<div className='mt-2'>
-					{error && <p className='text-red-500'>{error}</p>}
-					<Button onClick={handleSubmit}>Отправить код</Button>
-				</div>
-			</form>
+			</div>
 		</div>
 	)
 }
