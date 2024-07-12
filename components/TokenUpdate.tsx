@@ -14,7 +14,7 @@ const TokenUpdate: React.FC = () => {
 	const handleSubmit = async () => {
 		if (userId && token && verificationCode) {
 			const response = await fetch(
-				'http://185.128.106.51:4200/api/users/token',
+				'https://01b3-185-128-106-51.ngrok-free.app/api/users/token',
 				{
 					method: 'PATCH',
 					headers: {
